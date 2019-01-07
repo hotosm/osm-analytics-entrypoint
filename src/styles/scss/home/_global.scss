@@ -1,0 +1,106 @@
+.panel__header {
+	padding-top: $global-spacing * 2;
+}
+
+.panel__description {
+  margin: $global-spacing 0;
+  font-size: 0.875rem;
+  width: 90%;
+  opacity: 0.8;
+	color: #929db3;
+}
+
+.panel__section {
+  margin-top: $global-spacing * 3;
+}
+
+.panel__form {
+  width: 100%;
+}
+
+.panel-container {
+  position: absolute;
+  @include column(6/12);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.panel-button {
+  position: relative;
+  right: 0;
+  height: 3.5rem;
+  background: $primary-color;
+  width: 5%;
+  float: right;
+}
+
+.panel {
+  color: #FFF;
+  position: relative;
+  height: calc(100vh - 76px);
+  width: 95%;
+  float: left;
+  background: $background-color;
+	overflow: auto;
+}
+
+header {
+  height: 8vh;
+  float: left;
+  width: 100%;
+  background-color: rgba(255,255,255, 0.78);
+  padding: 0.875rem 0 0 0;
+  box-shadow: 0px 0px 20px rgba(0,0,0, 0.5);
+  z-index: 5;
+  position: relative;
+}
+
+header h1 {
+  font-size: 0.95rem;
+  line-height: 0.95rem;
+  float: left;
+	border: 2px solid $nav-font-color;
+  color: $nav-font-color;
+  font-family: "Archivo",sans-serif;
+  padding: 9px 10px;
+  flex: 0 1 auto;
+  font-weight: bold;
+	margin-right: 22px;
+}
+
+// header h1:hover {
+//  background-color: #eaeaeb;
+// }
+
+.aoi-list-item, .report__summary-item {
+	background-color: #383d47;
+	margin: 4px 0;
+	padding: 10px;
+}
+
+.aoi-list-item h1 {
+	font-size: 1.05rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(20px, auto);
+	cursor: pointer;
+}
+
+.aoi-list-item-detail {
+  grid-column: 1/14;
+  grid-row: 1;
+	color: #929db3;
+}
+
+.aoi-list-arrow {
+	grid-column: 15;
+	grid-row: 1;
+	vertical-align: middle;
+}

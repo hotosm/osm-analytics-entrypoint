@@ -1,0 +1,50 @@
+analytics:
+    - name: OpenCities
+      url: http://opencities.org
+      github: http://github.com/opencities/opencities
+      image: ../images/tools/OSMAnalyticsTool.png
+      description: |
+        Open data today to build resilient and sustainable societies tomorrow.
+      categories:
+        - mobility
+        - environment
+      owners:
+        - HOT
+        - Someone else
+    - name: OSM Analytics for Health
+      url: http://health.osm-analytics.org
+      image: ../images/tools/OSMAHealth.png
+      github: https://github.com/hotosm/osma-health
+      description: |
+        Extension of OSM Analytics for health campaigns.
+      categories:
+        - health
+      owners:
+        - HOT
+        - Someone else
+
+tools:
+    - name: OSMCha
+      url: https://osmcha.mapbox.com
+      description: |
+        Validation tool for OpenStreetMap.
+      categories:
+        - Quality Assurance
+        - Data quality
+        - Error detection
+    - name: Tasking Manager
+      url: http://tasks.hotosm.org
+      description: |
+        The Tasking Manager is a mapping tool designed and built for the Humanitarian OpenStreetMap Team's collaborative mapping process in OpenStreetMap. The purpose of the tool is to divide up a mapping project into smaller tasks that can be completed rapidly with many people working on the same overall area. It shows which areas need to be mapped and which areas need the mapping validated.
+
+contributors:
+    - name: Humanitarian OpenStreetMap Team
+      url: https://hotosm.org
+      image: images/hot.jpg
+      description: |
+        HOT is an international team dedicated to humanitarian action and community development through open mapping.
+    - name: Mapbox
+      url: https:/mapbox.com
+      image: images/mapbox.jpg
+      description: |
+          Mapbox is the location data platform for mobile and web applications. They provide building blocks to add location features like maps, search, and navigation into any experience you create.
