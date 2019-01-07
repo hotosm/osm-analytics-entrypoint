@@ -22,6 +22,17 @@ analytics:
       owners:
         - HOT
         - Someone else
+    - name: Visualize Change
+      url: http://health.osm-analytics.org
+      image: ../images/tools/OSMAHealth.png
+      github: https://github.com/hotosm/osma-health
+      description: |
+        Extension of OSM Analytics for health campaigns.
+      categories:
+        - health
+      owners:
+        - HOT
+        - Someone else
 
 tools:
     - name: OSMCha

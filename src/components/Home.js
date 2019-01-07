@@ -29,7 +29,6 @@ export class Home extends React.Component {
           </div>
         </div>
         <section className='section__body'>
-          <div className="blue-partial-bg"></div>
           <div className='inner'>
             <Resources />
           </div>

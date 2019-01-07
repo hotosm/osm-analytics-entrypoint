@@ -1,0 +1,97 @@
+.resource-section h4 {
+  text-align: left;
+}
+
+.resource-section {
+  margin-left: 0.7rem;
+}
+
+.resource-line {
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.analytics-project {
+  width: 49%;
+  background-color: #d3dbe6;
+  height: 360px;
+}
+
+.analytics-project > img {
+  display: inline-block;
+  width: 100%;
+  padding: 0 0 0 1rem;
+}
+
+.left {
+  float: left;
+}
+
+.mr {
+  margin-right: 0.7rem;
+}
+
+.right {
+  float: right;
+}
+
+.ml {
+  margin-left: 0.7rem;
+}
+
+.project-title {
+  padding: 1rem !important;
+  display: inline-block;
+}
+
+.project-description {
+  display: block;
+  position: relative;
+  top: -200px;
+  height: 200px;
+  width: 50%;
+  background-color: white;
+}
+
+.project-description > p:first-child {
+  font-size: 1.1rem;
+  padding: 1rem 0.2rem 1rem 1rem !important;
+  text-align: left !important;
+}
+
+.project-link {
+  text-align: left;
+  padding: 0 0rem 0.3rem 0rem !important;
+  border-bottom: 1px solid #4a90e2;
+  margin: 0 1rem;
+  width: 90% !important;
+  &:after {
+    content: ">";
+    float: right;
+    color: #4a90e2 !important;
+  }
+}
+
+.link-section {
+  color: #4a90e2 !important;
+  text-decoration: none !important;
+}
+
+.project-title-section {
+  display: block;
+  height: 60px;
+}
+
+.white-area {
+  width: 5%;
+  float: left;
+}
+
+.project-thumb-section {
+  display: block;
+  height: 300px;
+  background-size: contain;
+  margin: 0 0 0 1rem;
+}

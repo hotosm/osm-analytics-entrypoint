@@ -6,15 +6,11 @@ import resources from '../config/resources.json';
 export class Resources extends React.Component {
 
   render() {
-    console.log(resources);
     return(
-      <div>
+      <div className="resource-section">
         <h4>Core analytics tools</h4>
         <div>
-          {resources.analytics.map(
-            (project, n) => <AnalyticsProjects data={project} key={n} />
-            )
-          }
+          {sliceAnalytics(resources.analytics)}
         </div>
       </div>
     );
@@ -22,19 +18,46 @@ export class Resources extends React.Component {
 }
 
 
-class AnalyticsProjects extends React.Component {
+function sliceAnalytics( analytics ) {
+  var lines = []
+  for (let i = 0; i < analytics.length; i += 2) {
+    lines.push(<AnalyticsLine lineItems={analytics.slice(i, i+2)} key={i} />);
+  }
+  return lines;
+}
+
+
+class AnalyticsLine extends React.Component {
   render() {
     return(
-      <div>
-        <div>
-          <h3>{this.props.data.name}</h3>
-          <img src={this.props.data.image}
-            alt={`screenshot of ${this.props.data.name}`}
-          />
+      <div className="resource-line">
+        {this.props.lineItems.map(
+          (project, n) => <AnalyticsProjects data={project} key={n} order={n} />
+      )}
+    </div>
+  );
+  }
+}
+
+
+class AnalyticsProjects extends React.Component {
+  render() {
+    const position = this.props.order % 2 === 0 ? 'left mr' : 'right ml';
+    const style = {backgroundImage: 'url(' + this.props.data.image + ')'};
+    return(
+      <div className={`analytics-project ${position}`}>
+        <div className="project-title-section">
+          <h3 className="project-title left">{this.props.data.name}</h3>
         </div>
-        <div>
-          <span>{this.props.data.description}</span>
-          <a href={this.props.data.url}>{this.props.data.url}</a>
+        <div className="project-thumb-section" style={style}>
+        </div>
+        <div className="project-description">
+          <p>{this.props.data.description}</p>
+          <a className="link-section" href={this.props.data.url}>
+            <p className="project-link">
+              {this.props.data.url}
+            </p>
+          </a>
         </div>
       </div>
     );
