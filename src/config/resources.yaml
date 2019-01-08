@@ -47,6 +47,22 @@ tools:
       url: http://tasks.hotosm.org
       description: |
         The Tasking Manager is a mapping tool designed and built for the Humanitarian OpenStreetMap Team's collaborative mapping process in OpenStreetMap. The purpose of the tool is to divide up a mapping project into smaller tasks that can be completed rapidly with many people working on the same overall area. It shows which areas need to be mapped and which areas need the mapping validated.
+      categories:
+        - Mapping
+        - Coordination
+    - name: OverPass Turbo
+      url: http://overpass-turbo.eu/
+      description: |
+        OverPass Turbo is a web based data mining tool for OpenStreetMap.
+      categories:
+        - Data access
+    - name: OSM QA Tiles
+      url: http://osmlab.github.io/osm-qa-tiles/
+      description: |
+        Daily OpenStreetMap planet dump as vector tiles. Available as a country and historical extracts.
+      categories:
+        - Data access
+        - Vector tiles
 
 contributors:
     - name: Humanitarian OpenStreetMap Team

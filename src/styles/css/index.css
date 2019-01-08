@@ -1547,6 +1547,24 @@ header h1 {
       display: inline-block;
       margin: 0.5rem 0; } }
 
+.osm-tool {
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .osm-tool {
+      width: 33% !important; } }
+  @media only screen and (max-width: 991px) {
+    .osm-tool {
+      display: inline-block;
+      margin: 0.5rem 0; } }
+
+.osm-tool {
+  display: inherit; }
+
+.tool-description > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 150px; }
+
 .left {
   float: left; }
 
@@ -1573,7 +1591,7 @@ header h1 {
       top: -150px;
       height: 150px; } }
 
-.project-description > p:first-child {
+.project-description > p:first-child, .tool-description > p {
   font-size: 1.1rem;
   padding: 1rem 0.2rem 1rem 1rem !important;
   text-align: left !important; }
