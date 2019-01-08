@@ -42,7 +42,7 @@ class AnalyticsLine extends React.Component {
 
 class AnalyticsProjects extends React.Component {
   render() {
-    const position = this.props.order % 2 === 0 ? 'left mr' : 'right ml';
+    const position = this.props.order % 2 === 0 ? 'left' : 'right';
     const style = {backgroundImage: 'url(' + this.props.data.image + ')'};
     return(
       <div className={`analytics-project ${position}`}>

@@ -7,38 +7,33 @@
 }
 
 .resource-line {
-  padding: 0.5rem 0;
   display: inline-block;
   position: relative;
   width: 100%;
+  @include media(medium-up) {
+    padding: 0.5rem 0;
+  }
 }
 
 .analytics-project {
-  width: 49%;
   background-color: #d3dbe6;
   height: 360px;
-}
-
-.analytics-project > img {
-  display: inline-block;
   width: 100%;
-  padding: 0 0 0 1rem;
+  @include media(medium-up) {
+    width: 49% !important;
+  }
+  @include media(medium-down) {
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
 }
 
 .left {
   float: left;
 }
 
-.mr {
-  margin-right: 0.7rem;
-}
-
 .right {
-  float: right;
-}
-
-.ml {
-  margin-left: 0.7rem;
+    float: right;
 }
 
 .project-title {
@@ -49,10 +44,18 @@
 .project-description {
   display: block;
   position: relative;
-  top: -200px;
-  height: 200px;
-  width: 50%;
   background-color: white;
+  @include media(small-up) {
+    top: -200px;
+    height: 200px;
+  }
+  @include media(large-up) {
+    width: 50%;
+  }
+  @include media(small-down) {
+    top: -150px;
+    height: 150px;
+  }
 }
 
 .project-description > p:first-child {
@@ -84,14 +87,10 @@
   height: 60px;
 }
 
-.white-area {
-  width: 5%;
-  float: left;
-}
-
 .project-thumb-section {
   display: block;
   height: 300px;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0 0 0 1rem;
 }
