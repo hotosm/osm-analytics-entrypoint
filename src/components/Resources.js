@@ -4,6 +4,9 @@ import resources from '../config/resources.json';
 
 
 export class Resources extends React.Component {
+  state = {
+    showAllContrib: false
+  };
 
   render() {
     return(
@@ -18,8 +21,27 @@ export class Resources extends React.Component {
         </div>
         <h4>Core contributors</h4>
         <div>
-          {sliceContributors(resources.contributors)}
+          {sliceContributors(resources.coreContributors)}
         </div>
+        {!this.state.showAllContrib &&
+          <button className='button button--small button--tertiary-filled link-forward left'
+            onClick={() => this.setState({'showAllContrib': !this.state.showAllContrib})}
+          >
+            All contributors
+          </button>
+        }
+        {this.state.showAllContrib &&
+          <div className={`other-contributors`}>
+            <div>
+              {sliceContributors(resources.contributors)}
+            </div>
+            <button className='button button--small button--tertiary-filled link-forward left'
+              onClick={() => this.setState({'showAllContrib': !this.state.showAllContrib})}
+              >
+              Only core contributors
+            </button>
+          </div>
+        }
       </div>
     );
   }

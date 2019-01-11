@@ -64,14 +64,25 @@ tools:
         - Data access
         - Vector tiles
 
-contributors:
+coreContributors:
     - name: Humanitarian OpenStreetMap Team
       url: https://hotosm.org
-      image: images/hot.jpg
+      image: images/logo-hd.png
       description: |
         HOT is an international team dedicated to humanitarian action and community development through open mapping.
     - name: Mapbox
-      url: https:/mapbox.com
-      image: images/mapbox.jpg
+      url: https://mapbox.com
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Mapbox_Logo.svg/320px-Mapbox_Logo.svg.png
       description: |
           Mapbox is the location data platform for mobile and web applications. They provide building blocks to add location features like maps, search, and navigation into any experience you create.
+    - name: World Bank
+      url: https://worldbank.org
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/The_World_Bank_logo.svg/320px-The_World_Bank_logo.svg.png
+      description: |
+          The World Bank has set two ambitious goals to push extreme poverty to no more 3 percent by 2030, and to promote shared prosperity and greater equity in the developing world.
+contributors:
+    - name: Development Seed
+      url: https://developmentseed.org/
+      image: https://developmentseed.org/assets/graphics/layout/ds-logo-pos.svg
+      description: |
+          Development Seed works to solve the world's hardest problems with open data and open technology.
