@@ -16,9 +16,22 @@ export class Resources extends React.Component {
         <div>
           {sliceTools(resources.tools)}
         </div>
+        <h4>Core contributors</h4>
+        <div>
+          {sliceContributors(resources.contributors)}
+        </div>
       </div>
     );
   }
+}
+
+
+function sliceContributors( tools ) {
+  var lines = []
+  for (let i = 0; i < tools.length; i += 3) {
+    lines.push(<Line lineItems={tools.slice(i, i+3)} key={i} type={'contributors'} />);
+  }
+  return lines;
 }
 
 
@@ -46,6 +59,8 @@ class Line extends React.Component {
       return <AnalyticsProject data={project} key={n} order={n} />;
     } else if (this.props.type === 'tools') {
       return <Tool data={project} key={n} order={n} />;
+    } else if (this.props.type === 'contributors') {
+      return <Contributor data={project} key={n} order={n} />;
     }
   }
   render() {
@@ -111,6 +126,31 @@ class Tool extends React.Component {
               {this.props.data.url}
             </p>
           </a>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Contributor extends React.Component {
+  render() {
+    var position;
+    if (this.props.order % 3 === 0) {
+      position = 'left';
+    } else if (this.props.order % 3 === 1) {
+      position = 'none';
+    } else {
+      position = 'right';
+    }
+    return(
+      <div className={`contributor ${position}`}>
+        <div className="contributor-logo-section">
+          <a href={this.props.data.url}>
+            <img class="contributor-logo" src={this.props.data.image} alt={`${this.props.data.name} logo`} />
+          </a>
+        </div>
+        <div className="contributor-description">
+          <p>{this.props.data.description}</p>
         </div>
       </div>
     );

@@ -29,7 +29,12 @@
 }
 
 .osm-tool {
+
+}
+
+.osm-tool, .contributor {
   width: 100%;
+  display: inherit;
   @include media(medium-up) {
     width: 33% !important;
   }
@@ -39,8 +44,10 @@
   }
 }
 
-.osm-tool {
-  display: inherit;
+.tool-description {
+  padding: 0 0 1rem 0 !important;
+  border-bottom: 1px solid #e1e1e1;
+  outline-offset: 0.5rem;
 }
 
 .tool-description > p {
@@ -79,7 +86,7 @@
   }
 }
 
-.project-description > p:first-child, .tool-description > p {
+.project-description > p:first-child, .tool-description > p, .contributor-description > p {
   font-size: 1.1rem;
   padding: 1rem 0.2rem 1rem 1rem !important;
   text-align: left !important;
@@ -106,6 +113,20 @@
 .project-title-section {
   display: block;
   height: 60px;
+}
+
+.contributor-logo-section {
+  display: block;
+  max-height: 150px;
+  text-align: left;
+}
+.contributor-logo-section > a {
+  padding: 0 !important;
+}
+
+.contributor-logo {
+  max-width: 17rem !important;
+  padding: 2rem 3rem 1rem 1rem !important;
 }
 
 .project-thumb-section {
