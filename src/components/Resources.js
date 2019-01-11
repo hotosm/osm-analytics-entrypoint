@@ -35,7 +35,7 @@ export class Resources extends React.Component {
             <div>
               {sliceContributors(resources.contributors)}
             </div>
-            <button className='button button--small button--tertiary-filled link-forward left'
+            <button className='button button--small button--tertiary-filled link-back left'
               onClick={() => this.setState({'showAllContrib': !this.state.showAllContrib})}
               >
               Only core contributors
