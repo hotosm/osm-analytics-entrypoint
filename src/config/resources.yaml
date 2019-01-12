@@ -55,13 +55,13 @@ tools:
       description: |
         OverPass Turbo is a web based data mining tool for OpenStreetMap.
       categories:
-        - Data access
+        - Data extraction
     - name: OSM QA Tiles
       url: http://osmlab.github.io/osm-qa-tiles/
       description: |
         Daily OpenStreetMap planet dump as vector tiles. Available as a country and historical extracts.
       categories:
-        - Data access
+        - Data extraction
         - Vector tiles
 
 coreContributors:
