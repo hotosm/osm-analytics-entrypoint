@@ -5,7 +5,7 @@ analytics:
       image: ../images/tools/OSMAnalyticsTool.png
       description: |
         Open data today to build resilient and sustainable societies tomorrow.
-      categories:
+      category:
         - mobility
         - environment
       owners:
@@ -17,7 +17,7 @@ analytics:
       github: https://github.com/hotosm/osma-health
       description: |
         Extension of OSM Analytics for health campaigns.
-      categories:
+      category:
         - health
       owners:
         - HOT
@@ -28,7 +28,7 @@ analytics:
       github: https://github.com/hotosm/osma-health
       description: |
         Extension of OSM Analytics for health campaigns.
-      categories:
+      category:
         - health
       owners:
         - HOT
@@ -39,30 +39,30 @@ tools:
       url: https://osmcha.mapbox.com
       description: |
         Validation tool for OpenStreetMap.
-      categories:
-        - Quality Assurance
-        - Data quality
-        - Error detection
+      category:
+        - quality-assurance
+        - data-quality
+        - error-detection
     - name: Tasking Manager
       url: http://tasks.hotosm.org
       description: |
         The Tasking Manager is a mapping tool designed and built for the Humanitarian OpenStreetMap Team's collaborative mapping process in OpenStreetMap. The purpose of the tool is to divide up a mapping project into smaller tasks that can be completed rapidly with many people working on the same overall area. It shows which areas need to be mapped and which areas need the mapping validated.
-      categories:
-        - Mapping
-        - Coordination
+      category:
+        - mapping
+        - coordination
     - name: OverPass Turbo
       url: http://overpass-turbo.eu/
       description: |
         OverPass Turbo is a web based data mining tool for OpenStreetMap.
-      categories:
-        - Data extraction
+      category:
+        - data-extraction
     - name: OSM QA Tiles
       url: http://osmlab.github.io/osm-qa-tiles/
       description: |
         Daily OpenStreetMap planet dump as vector tiles. Available as a country and historical extracts.
-      categories:
-        - Data extraction
-        - Vector tiles
+      category:
+        - data-extraction
+        - vector-tiles
 
 coreContributors:
     - name: Humanitarian OpenStreetMap Team

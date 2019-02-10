@@ -1637,6 +1637,73 @@ header h1 {
   background-repeat: no-repeat;
   margin: 0 0 0 1rem; }
 
+.not-found-msg {
+  width: 100% !important;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 30px; }
+
+.filter-section {
+  background-color: #d3dbe6; }
+
+.filter-section-content {
+  padding: 2rem 1rem 4rem 1rem; }
+
+.filter-options-row {
+  width: 100%;
+  display: inline-block; }
+
+.filter-option {
+  float: left;
+  background-color: #68707f;
+  margin: 0 1%;
+  color: #fff !important; }
+  @media only screen and (min-width: 768px) {
+    .filter-option {
+      width: 23% !important; } }
+
+.filter-option > span {
+  float: left;
+  padding: 1.6rem 0;
+  width: 70%;
+  text-align: left; }
+
+.filter-option > span:after {
+  content: url(../../graphics/icons/chevron-right.svg);
+  margin-left: 0.25rem;
+  height: 0.6rem;
+  width: 1rem;
+  left: 0;
+  top: 1rem;
+  float: right; }
+
+.outer-circle {
+  background: #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0.8rem;
+  float: left; }
+
+.inner-circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  margin: 18px; }
+
+.red-circle {
+  background-color: #d73f3f; }
+
+.blue-light-circle {
+  background-color: #50e3c2; }
+
+.blue-dark-circle {
+  background-color: #4a90e2; }
+
+.yellow-circle {
+  background-color: #f8e71c; }
+
 .about-page {
   float: left;
   clear: none;

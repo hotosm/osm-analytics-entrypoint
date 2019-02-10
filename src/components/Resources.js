@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import resources from '../config/resources.json';
 
@@ -15,6 +16,7 @@ export class Resources extends React.Component {
         <div>
           {sliceAnalytics(resources.analytics)}
         </div>
+        {filter_section()}
         <h4>More OSM tools</h4>
         <div>
           {sliceTools(resources.tools)}
@@ -48,30 +50,54 @@ export class Resources extends React.Component {
 }
 
 
-function sliceContributors( tools ) {
-  var lines = []
-  for (let i = 0; i < tools.length; i += 3) {
-    lines.push(<Line lineItems={tools.slice(i, i+3)} key={i} type={'contributors'} />);
+export function sliceContributors( contributors ) {
+  if (contributors.length) {
+    var lines = []
+    for (let i = 0; i < contributors.length; i += 3) {
+      lines.push(<Line lineItems={contributors.slice(i, i+3)} key={i} type={'contributors'} />);
+    }
+    return lines;
+  } else {
+    return(
+      <div>
+        <p className='not-found-msg'>No contributors found.</p>
+      </div>
+    );
   }
-  return lines;
 }
 
 
-function sliceTools( tools ) {
-  var lines = []
-  for (let i = 0; i < tools.length; i += 3) {
-    lines.push(<Line lineItems={tools.slice(i, i+3)} key={i} type={'tools'} />);
+export function sliceTools( tools ) {
+  if (tools.length) {
+    var lines = []
+    for (let i = 0; i < tools.length; i += 3) {
+      lines.push(<Line lineItems={tools.slice(i, i+3)} key={i} type={'tools'} />);
+    }
+    return lines;
+  } else {
+    return(
+      <div>
+        <p className='not-found-msg'>No OSM tools found.</p>
+      </div>
+    );
   }
-  return lines;
 }
 
 
-function sliceAnalytics( analytics ) {
-  var lines = []
-  for (let i = 0; i < analytics.length; i += 2) {
-    lines.push(<Line lineItems={analytics.slice(i, i+2)} key={i} type={'analytics'} />);
+export function sliceAnalytics( analytics ) {
+  if (analytics.length) {
+    var lines = []
+    for (let i = 0; i < analytics.length; i += 2) {
+      lines.push(<Line lineItems={analytics.slice(i, i+2)} key={i} type={'analytics'} />);
+    }
+    return lines;
+  } else {
+    return(
+      <div>
+        <p className='not-found-msg'>No analytics tools found.</p>
+      </div>
+    );
   }
-  return lines;
 }
 
 
@@ -90,9 +116,9 @@ class Line extends React.Component {
       <div className="resource-line">
         {this.props.lineItems.map(
           (project, n) => this.get_content(project, n)
-      )}
-    </div>
-  );
+        )}
+      </div>
+    );
   }
 }
 
@@ -177,4 +203,40 @@ class Contributor extends React.Component {
       </div>
     );
   }
+}
+
+function filter_section() {
+  return(
+    <div className="filter-section">
+      <div className="filter-section-content">
+        <h3 className="left">Find tools to help with:</h3>
+        <div className="filter-options-row">
+          <Link to="/filters/category/error-detection" className="filter-option">
+            <div className="outer-circle">
+              <div className="inner-circle red-circle"></div>
+            </div>
+            <span>Error Detection</span>
+          </Link>
+          <Link to="/filters/category/coordination" className="filter-option">
+            <div className="outer-circle">
+              <div className="inner-circle blue-light-circle"></div>
+            </div>
+            <span>Coordination</span>
+          </Link>
+          <Link to="/filters/category/planning" className="filter-option">
+            <div className="outer-circle">
+              <div className="inner-circle blue-dark-circle"></div>
+            </div>
+            <span>Planning</span>
+          </Link>
+          <Link to="/filters/category/data-extraction" className="filter-option">
+            <div className="outer-circle">
+              <div className="inner-circle yellow-circle"></div>
+            </div>
+            <span>Data Extraction</span>
+          </Link>
+      </div>
+      </div>
+    </div>
+  );
 }
