@@ -145,8 +145,7 @@
 }
 
 .filter-section-content {
-  padding: 2rem 1rem 4rem 1rem;
-
+  padding: 2rem 1rem 3rem 1rem;
 }
 
 .filter-options-row {
@@ -157,45 +156,61 @@
 .filter-option {
   float:left;
   background-color: #68707f;
-  margin: 0 1%;
+  width: 100%;
+  margin: 1% 0.5%;
   color: #fff !important;
   @include media(medium-up) {
-    width: 23% !important;
+    width: 24% !important;
   }
 }
 
 .filter-option > span {
+  @include media(medium-up) {
+    padding: 1.4rem 0;
+  }
+  padding: 0.6rem 0;
   float: left;
-  padding: 1.6rem 0;
   width: 70%;
   text-align: left;
 }
 
 .filter-option > span:after {
-  content: url(../../graphics/icons/chevron-right.svg);
-  margin-left: 0.25rem;
-  height: 0.6rem;
-  width: 1rem;
-  left: 0;
-  top: 1rem;
-  float: right;
+  @include media(medium-up) {
+    content: url(../../graphics/icons/chevron-right.svg);
+    margin-left: 0.25rem;
+    height: 0.6rem;
+    width: 1rem;
+    left: 0;
+    top: 1rem;
+    float: right;
+  }
 }
 
 .outer-circle {
 	background: #fff;
 	border-radius: 50%;
-	height:50px;
-	width:50px;
-  margin: 0.8rem;
+	height: 30px;
+	width: 30px;
   float: left;
+  margin: 0.4rem;
+  @include media(medium-up) {
+    margin: 0.6rem 0.8rem;
+    height: 50px;
+  	width: 50px;
+  }
 }
 
 .inner-circle {
 	position: absolute;
 	border-radius: 50%;
-	height:14px;
-	width:14px;
-  margin: 18px;
+	height: 10px;
+	width: 10px;
+  margin: 10px;
+  @include media(medium-up) {
+    margin: 18px;
+    height: 14px;
+    width: 14px;
+  }
 }
 
 .red-circle {
