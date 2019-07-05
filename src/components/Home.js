@@ -39,8 +39,8 @@ export class Home extends React.Component {
             <p>
               This service is created the
               <a href='https://hotosm.org/'>Humanitarian OpenStreetMap Team</a>
-              and is open source. If you are interested in getting involved don’t hesitate
-              <a href='https://github.com/hotosm/osm-analytics-entrypoint'>reach out!</a>
+              and is open source. If you are interested in getting involved, don’t
+              hesitate, <a href='https://github.com/hotosm/osm-analytics-entrypoint'>reach out!</a>
             </p>
           </div>
         </section>
